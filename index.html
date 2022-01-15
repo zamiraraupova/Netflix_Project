@@ -4,23 +4,170 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto+Slab:wght@200&family=Titan+One&display=swap" rel="stylesheet">
     <title> Neflix Project</title>
+    <style>
+        body{
+            background-color: white;
+            font-family:'Times New Roman', Times, serif;
+            font-size: smaller;
+            background-image: url(./background_image.jpeg);
+        }
+        #container{
+            height: 110vh;
+            width: 90vw;
+            margin: auto;
+            /* border: 5px solid yellow; */
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        #title{
+            /* border: 1px solid yellow; */
+            margin: auto;
+            width: 15%;
+            padding-top: 10px;
+            font-size: 0;
+            font-family: 'Titan One', cursive;;
+            font-weight: bolder;
+            text-align: center;
+        }
+        span{
+            /* border: 1px solid red; */
+            font-size: xx-large;
+
+        }
+        #description{
+            /* border: 1px solid yellow; */
+            color: white;
+            font-size: medium;
+            margin:auto;
+            width: 40%;
+            text-align: center;
+
+        }
+        #survey-form{
+            margin: auto;
+            padding-top: 5px;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 25%;
+            height: 83%;
+        }
+        .box{
+            /* border:2px solid yellow; */
+            color: white;
+            margin: auto;
+            padding-left: 40px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }    
+        
+        #name,
+        #age,
+        #email,
+        #content{
+            margin-top: 5px;
+            width: 200px;
+            height: 30px;
+            /* border: 1px solid red; */
+            
+        }
+
+        #movie-type,
+        #radio {
+            /* border: 1px solid red; */
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        #btn{
+            color: white;
+            background-color: red; 
+            border-radius:20px;
+            height: 30px;
+            width: 100px;
+            margin-left: 30%;
+        }
+    </style>
+
 </head>
 <body>
-    <div class="container">
-        <header id="title">
-            <h1>Netflix</h1>
-            <h4>Thank you for signing up at Netflix. Tell us more about yourself</h4>
-        </header>
+
+    <div id="container">
+        <div id="title">
+            <span style="color:#ffffff">NET</span>
+            <span style="color:#FF0000">FLIX</span>
+        </div>
+        <div id="description">  
+            <h4 >Thank you for signing up at Netflix. Tell us more about yourself</h4>
+        </div>
         <form id="survey-form" action="">
 
+            <div class="box" id="box">
+                <label for="name">Name</label>
+                <br>
+                <input id="name" type="text" placeholder="Enter your name">
+            </div>
+
+            <div class="box" id="box">
+                <label for="age">Age</label>
+                <br>
+                <input id="age" type="number" placeholder="Enter your age">
+            </div>
+
+            <div class="box" id="box">
+                <label for="email">Email</label>
+                <br>
+                <input id="email" type="type" placeholder="Enter your email">
+            </div>
+
+            <div class="box" id="box">
+                <label for="content">Content Type</label>
+                <br>
+                <select id="content" name="content">
+                    <option value="series">Series</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            
+            <div class="box" id="movie-type">
+                <div>
+                    <label for=""> Movie Type</label>
+                </div>
+    
+                <input id="comedy" type="checkbox" name="one">
+                <label for="comedy">Comedy</label>
+                <br>
+                <input id="action" type="checkbox" name="two">
+                <label for="action">Action</label>
+                <br>
+                <input id="romance" type="checkbox" name="three" checked>
+                <label for="romance">Romance</label>
+            </div>
+
+            <div class="box" id="radio">
+                <div >
+                    <label for="radio">Gender</label>
+                </div>
+                <input id="male" type="radio" value="male" name="gender">
+                <label for="male">Male</label>
+                <br>
+                <input id="female" type="radio" value="female" name="gender">
+                <label for="female">Female</label>
+                <br>
+                <input id="other" type="radio" value="other" name="gender">
+                <label for="other">Other</label>
+            </div>
+
             <div class="box">
-                <label for="">Name</label>
-                <input type="text" placeholder="Enter your name">
+                <label for="comments"> Feedback</label>
+                <br>
+                <textarea id="comments" name="" cols="20" rows="4"> Any comments </textarea>
             </div>
-            <div>
-                <label for=""></label>
-            </div>
+
+            <input id="btn" type="submit">
 
         </form>
     </div>
